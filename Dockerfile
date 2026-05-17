@@ -17,7 +17,7 @@ RUN apt-get update && apt-get upgrade -y && \
 
 # Setup verilator
 WORKDIR /usr/src/
-ENV VERILATOR_VERSION=5.020
+ENV VERILATOR_VERSION=5.048
 RUN git clone https://github.com/verilator/verilator.git
 WORKDIR /usr/src/verilator
 RUN git checkout v${VERILATOR_VERSION}
