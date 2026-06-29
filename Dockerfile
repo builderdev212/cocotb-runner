@@ -19,7 +19,7 @@ WORKDIR /usr/src/
 RUN rm -rf verilator
 
 # Setup python virtual environment for cocotb
-ENV VIRTUAL_ENV=.venv
+ENV VIRTUAL_ENV=/usr/src/.venv
 RUN python3 -m venv ${VIRTUAL_ENV}
 ENV PATH="${VIRTUAL_ENV}/bin:$PATH"
 
