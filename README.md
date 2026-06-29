@@ -182,27 +182,6 @@ def test_m_fifo_sync_rgw(testcase, cocotb_runner):
             shutil.move(cov_src, cov_dst)
 ```
 
-#### Ruff
-
-There is currently a Ruff linter setup that uses `pyproject.toml` to ensure the python testbenches all maintain the
-same standard of code formatting. It uses the default python 3.11 image and installs ruff. The template to do this
-elsewhere is as follows:
-
-```yaml
-cocotb_python_lint:
-  tags:
-    - podman-runner
-  image: python:3.11
-  stage: lint
-  rules:
-    - changes:
-        - <directory to check>/**/*.py
-  script:
-    - pip install ruff
-    - ruff check <directory to check>
-    - ruff format --check <directory to check>
-```
-
 ## Useful Links
 
 - https://www.cocotb.org/
