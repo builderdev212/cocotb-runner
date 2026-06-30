@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     autoconf g++ bison flex git make git help2man perl \
     libfl2 libfl-dev zlib1g zlib1g-dev \
     ccache mold libgoogle-perftools-dev numactl \
+    curl gpg \
     && rm -rf /var/lib/apt/lists/*
 
 # Pull verilator source and build
